@@ -10,3 +10,8 @@ export EDMFONTFILE="$HOME/.config/edm/fonts-adobe.list"
 
 sed 's/normal--0-/normal--*-/g; s/-p-0-/-p-*-/g; s/-m-0-/-m-*-/g' /home/arpes/EPICS_Rocky9_deploy/edm_etc/fonts.list > "$HOME/.config/edm/fonts-compatible.list"
 export EDMFONTFILE="$HOME/.config/edm/fonts-compatible.list"
+
+cp /home/arpes/EPICS_Rocky9_deploy/edm_etc/fonts.list "$HOME/.config/edm/fonts-compatible.list"
+sed -i 's/normal--0-/normal--*-/g' "$HOME/.config/edm/fonts-compatible.list"
+sed -i 's/-p-0-/-p-*-/g' "$HOME/.config/edm/fonts-compatible.list"
+sed -i 's/-m-0-/-m-*-/g' "$HOME/.config/edm/fonts-compatible.list"
