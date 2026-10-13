@@ -15,3 +15,6 @@ cp /home/arpes/EPICS_Rocky9_deploy/edm_etc/fonts.list "$HOME/.config/edm/fonts-c
 sed -i 's/normal--0-/normal--*-/g' "$HOME/.config/edm/fonts-compatible.list"
 sed -i 's/-p-0-/-p-*-/g' "$HOME/.config/edm/fonts-compatible.list"
 sed -i 's/-m-0-/-m-*-/g' "$HOME/.config/edm/fonts-compatible.list"
+
+sed -i '/^new century schoolbook={/,/^}/s/,320,480,720//g' "$HOME/.config/edm/fonts-compatible.list"
+sed -n '52,58p' "$HOME/.config/edm/fonts-compatible.list"
