@@ -6,3 +6,7 @@ sed \
   "$EDMFILES/fonts.list" > "$HOME/.config/edm/fonts-adobe.list"
 
 export EDMFONTFILE="$HOME/.config/edm/fonts-adobe.list"
+
+
+sed 's/normal--0-/normal--*-/g; s/-p-0-/-p-*-/g; s/-m-0-/-m-*-/g' /home/arpes/EPICS_Rocky9_deploy/edm_etc/fonts.list > "$HOME/.config/edm/fonts-compatible.list"
+export EDMFONTFILE="$HOME/.config/edm/fonts-compatible.list"
